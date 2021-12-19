@@ -1,0 +1,28 @@
+Cybersecurity Threat Landscape (Part 3 - Verizon)
+In this part, you should primarily use the Verizon Data Breaches Investigation Report plus independent research to answer the below questions.
+
+    1. What is the difference between an incident and a breach? 
+An incident is anything that could compromise data or systems including attacks. While a breach is when an attack is successful in getting into the network. 
+    2. What percentage of breaches were perpetrated by outside actors? What percentage were perpetrated by internal actors? 
+69% were by outside actors, and 34% were internal. 
+    3. What percentage of breaches were perpetrated by organized criminal groups? 
+39% were organized criminal groups. 
+
+    4. What percentage of breaches were financially motivated? 
+71% were money motivated. 
+
+    5. Define the following: 
+
+Denial of Service: Halting operation of a device that provides a service to a user or person. Such as a server that is unable to provide a webpage. 
+
+Command and Control : A computer that will send commands to a compromised system operated by an attacker. 
+
+Backdoor: A way to enter a computer system that will bypass all security features on the device.
+
+Keylogger: A program that will record keystrokes on devices from the users input. 
+
+    6. The time from an attacker’s first action to the initial compromise of an asset is typically measured in which one? Seconds, minutes, hours, days? 
+
+Minutes. 
+    7. When it comes to phishing, which industry has the highest click rates?
+Education has the highest click rates. 

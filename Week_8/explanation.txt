@@ -1,0 +1,27 @@
+Phase1
+
+The only IP that is alive on the list is Hollywood Application Servers 167.172.144.11/32.
+This is at Layer 2 of the OSI model. 
+
+
+Phase2
+
+For the network 167.172.144.11/32 the IP that was able to be scanned was the .12 IP. 
+The results from the SYN scan show that the following ports are open. 
+22
+80
+443
+These ports are located at Layer 4 of the OSI model. 
+
+Phase3
+
+The /etc/hosts file was redirecting rollingstone.com to 98.137.246.8. 
+
+Phase4
+
+Within the packet capture, there is a duplicate IP that was added in to the network. 
+Along with a request to download a zipped logger file. 
+The duplicate IP is a Layer 3 issue. While the file download is a Layer 7 issue. 
+
+Phase5
+

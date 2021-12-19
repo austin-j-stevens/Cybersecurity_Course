@@ -1,0 +1,57 @@
+192.168.1.100 
+22 - ssh
+9200 - http
+
+192.168.1.105
+22 - ssh
+80 - http
+
+192.168.1.110 - linux
+22 - ssh
+80 - http
+111 - rcpbind
+139 - netbios
+445 - netbios
+
+192.168.1.115 - linux
+22 - ssh 
+80 - http  
+111 - rcpbind
+139 - netbios
+445 - netbios
+
+192.168.1.90
+kali box
+
+
+
+
+===================================
+
+Server: Apache v2.4.10
+http://192.168.1.110/wordpress/xmlrpc.php
+>>readme as well (/readme.html)
+>>cron file (/wp-cron,php)
+wordpress version: 4.8.7
+
+Identified users:
+} steven - pink84
+} michael - pass michael
+} root - R@venSecurity
+
+
+after logging in to michael account
+went to /var/www/html/wordpress/wp-config.php 
+loacted sql database username and password
+
+
+flag1 : in /var/www search for 'grep -r flag1 *'
+
+
+sql login
+
+use wordpress;
+show tables; 
+
+
+

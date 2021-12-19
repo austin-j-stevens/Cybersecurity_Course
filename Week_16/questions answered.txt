@@ -1,0 +1,11 @@
+Step 1
+
+This information can provide a name which can be searched on the companys systems. Once you have a baseling for the usernames/emails you can figure out what the CEO's information is for both thier logon info and their company email.
+
+
+
+Step 5
+
+
+The Samba services on the Metasploitable machine have not been updated since 2008. They have numerous vulnerabilities, some of which will not only cripple the machine but most likely other devices that are on the same network. 
+The main vulnerability that is cross sight scripting will allow an attacker to load third party software from another location. This could be any form of a payload including cookie poisoning, javascript code, or create and send HTTP requests. 

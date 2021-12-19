@@ -1,0 +1,368 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs22\lang9 Unit 11 Homework: Network Security\par
+\par
+Part 1: Review Questions\par
+Before diving into a lab exercise, complete the following review questions:\par
+\par
+Security Control Types\par
+The concept of defense in depth can be broken down into three different security control types. Identify the security control type of each set  of defense tactics.\par
+\par
+\par
+Walls, bollards, fences, guard dogs, cameras, and lighting are what type of security control?\par
+\b0 Physical Security Controls\b\par
+\par
+Security awareness programs, BYOD policies, and ethical hiring practices are what type of security control?\par
+\b0 Administrative Controls. \b\par
+\par
+Encryption, biometric fingerprint readers, firewalls, endpoint security, and intrusion detection systems are what type of security control?\par
+\par
+\b0 Technical Controls. \b\par
+\par
+Intrusion Detection and Attack indicators\par
+What's the difference between an IDS and an IPS?\par
+\b0 An IDS sends alerts based on a ruleset when traffic triggers those rules. But it does not act on it. \par
+IPS will actively block and react to the rules it has been configured with to traffic on the network. \b\par
+What's the difference between an Indicator of Attack and an Indicator of Compromise?\par
+\b0 Indicator of Attack is when you are currently being attacked while an indicator of compromise is after you have been attacked. \b\par
+The Cyber Kill Chain\par
+Name each of the seven stages for the Cyber Kill chain and provide a brief example of each.\par
+\par
+\par
+Stage 1:\par
+\b0 Reconnaissance\par
+Port scans on a network. \par
+\b\par
+Stage 2:\par
+\b0 Weaponization\par
+Creating a deliverable payload such as a imbedded file in a word document. \par
+\b\par
+Stage 3:\par
+\b0 Delivery\par
+Sending the corrupting files to the victim.\par
+\b\par
+Stage 4:\par
+\b0 Exploitation\par
+The exploit executing the code, such as a executable script running. \par
+\b\par
+Stage 5:\par
+\b0 Installation\par
+The exploit creating a pathway into the system such as a backdoor. \par
+\b\par
+Stage 6:\par
+\b0 Command & Control\par
+The attackers  machine communicating with the tools installed on the host computer. \par
+\b\par
+Stage 7:\par
+\b0 Actions on Objective\par
+The attacker working on the objective set such as \par
+\b\par
+\par
+Snort Rule Analysis\par
+Use the provided Snort rules to answer the following questions:\par
+Snort Rule #1\par
+alert tcp $EXTERNAL_NET any -> $HOME_NET 5800:5820 (msg:"ET SCAN Potential VNC Scan 5800-5820"; flags:S,12; threshold: type both, track by_src, count 5, seconds 60; reference:url,doc.emergingthreats.net/2002910; classtype:attempted-recon; sid:2002910; rev:5; metadata:created_at 2010_07_30, updated_at 2010_07_30;)\par
+\par
+\par
+Break down the Sort Rule header. What is this rule doing?\par
+\par
+\par
+What stage of the Cyber Kill Chain does the alerted activity violate?\par
+\par
+\par
+What kind of attack is this rule monitoring?\par
+\par
+\par
+Snort Rule #2\par
+alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any (msg:"ET POLICY PE EXE or DLL Windows file download HTTP"; flow:established,to_client; flowbits:isnotset,ET.http.binary; flowbits:isnotset,ET.INFO.WindowsUpdate; file_data; content:"MZ"; within:2; byte_jump:4,58,relative,little; content:"PE|00 00|"; distance:-64; within:4; flowbits:set,ET.http.binary; metadata: former_category POLICY; reference:url,doc.emergingthreats.net/bin/view/Main/2018959; classtype:policy-violation; sid:2018959; rev:4; metadata:created_at 2014_08_19, updated_at 2017_02_01;)\par
+\par
+\par
+Break down the Sort Rule header. What is this rule doing?\par
+\par
+\par
+What stage of the Cyber Kill Chain does the alerted activity violate?\par
+\par
+\par
+What kind of attack is this rule monitoring?\par
+\par
+\par
+Snort Rule #3\par
+Your turn! Write a Snort rule that alerts when traffic is detected inbound on port 4444 to the local network on any port. Be sure to include the msg in the Rule Option.\par
+\par
+Part 2: "Drop Zone" Lab\par
+In this lab exercise, you will assume the role of a Jr. Security Administrator at an indoor skydiving company called Drop Zone.\par
+\par
+\par
+Your company hosts a web server that takes online reservations and credit card payments. As a result, your company must comply with PCI/DSS regulations which requires businesses who take online credit card payments to have a firewall in place to protect personally identifiable information (PII).\par
+\par
+\par
+Your network has been under attack from the following three IPs: 10.208.56.23, 135.95.103.76, and 76.34.169.118. You have decided to add these IPs to the drop zone within your firewall.\par
+\par
+\par
+The first requirement of PCI/DSS regulations is to protect your system with firewalls. "Properly configured firewalls protect your card data environment. Firewalls restrict incoming and outgoing network traffic through rules and criteria configured by your organization." PCI DSS Quick Reference Guide\par
+\par
+\par
+\par
+Set Up:\par
+For this lab you will use the Network Security Lab located in Azure.\par
+\par
+Once logged in, launch an instance of the machine firewalld from the HyperV Manager and login with the following credentials:\par
+\par
+Username: sysadmin\par
+\par
+Password: cybersecurity\par
+\par
+\par
+\par
+\par
+Reference:  {{\field{\*\fldinst{HYPERLINK https://manpages.debian.org/testing/firewalld/firewall-cmd.1.en.html }}{\fldrslt{https://manpages.debian.org/testing/firewalld/firewall-cmd.1.en.html\ul0\cf0}}}}\f0\fs22\par
+\par
+Instructions:\par
+The Senior Security Manager has drafted configuration requirements for your organization with the following specification.\par
+You need to configure zones that will segment each network according to service type.\par
+\par
+\par
+Public Zone\par
+\par
+Services: HTTP, HTTPS, POP3, SMTP\par
+Interface: ETH0\par
+\par
+\par
+\par
+Web Zone\par
+\par
+Source IP: 201.45.34.126\par
+Services: HTTP\par
+Interface: ETH1\par
+\par
+\par
+\par
+Sales Zone\par
+\par
+Source IP: 201.45.15.48\par
+Services: HTTPS\par
+Interface: ETH2\par
+\par
+\par
+\par
+Mail Zone\par
+\par
+Source IP: 201.45.105.12\par
+Services: SMTP, POP3\par
+Interface: ETH3\par
+\par
+\par
+\par
+You also need to drop all traffic from the following blacklisted IPs:\par
+\par
+10.208.56.23\par
+135.95.103.76\par
+76.34.169.118\par
+\par
+\par
+Uninstall ufw\par
+\par
+Before getting started, you should verify that you do not have any instances of ufw running. This will avoid conflicts with your firewalld service. This also ensures that firewalld will be your default firewall.\par
+\par
+Run the command that removes any running instance of ufw.\par
+\par
+\par
+Enable and start firewalld\par
+\par
+By default, the firewalld service should be running. If not, then run the following commands:\par
+\par
+\par
+Run the commands that enable and start firewalld upon boots and reboots.\par
+Note: This will ensure that firewalld remains active after each reboot.\par
+\par
+\par
+\par
+Confirm that the service is running.\par
+\par
+Run the command that checks whether or not the firewalld service is up and running.\par
+\par
+\par
+List all firewall rules currently configured.\par
+Next, lists all currently configured firewall rules. This will give you a good idea of what's currently configured and save you time in the long run by not doing double work.\par
+\par
+\par
+Run the command that lists all currently configured firewall rules:\par
+\par
+\par
+Take note of what zones and settings are configured. You many need to remove unneeded services and settings.\par
+\par
+\par
+\par
+List all supported service types that can be enabled.\par
+\par
+\par
+Run the command that lists all currently supported services to see if the service you need is available\par
+\par
+\par
+We can see that the Home and Drop Zones are created by default.\par
+\par
+\par
+\par
+Zone Views\par
+\par
+\par
+Run the command that lists all currently configured zones.\par
+\par
+\par
+We can see that the Public and Drop Zones are created by default. Therefore, we will need to create Zones for Web, Sales, and Mail.\par
+\par
+\par
+\par
+Create Zones for Web, Sales and Mail. (Hint look at the manpage in the instructions)\par
+\par
+\par
+Run the commands that create Web, Sales and Mail zones.\par
+\par
+\par
+If needed, use the manpages link for assistance.\par
+\par
+\par
+Remember to reload the firewalld service in order to apply your new settings before moving on.\par
+\par
+\par
+\par
+Set the zones to their designated interfaces.\par
+\par
+\par
+Run the command that sets your eth interfaces to your zones.\par
+\par
+\par
+Use the configurations provided at the beginning of the instructions.\par
+\par
+\par
+\par
+Add services to the active zones.\par
+\par
+\par
+Run the commands that add services to the public zone, the web zone, the sales zone, and the mail zone.\par
+\par
+\par
+Use the configurations provided at the beginning of the instructions.\par
+\par
+\par
+\par
+Add your adversaries to the Drop Zone.\par
+\par
+Run the command that will add all the blacklisted IPs to the Drop Zone.\par
+\par
+\par
+Make rules permanent then reload them:\par
+It's good practice to ensure that your firewalld installation remains nailed up and retains its services across reboots. This ensure that the network remains secured after unplanned outages such as power failures.\par
+\par
+Run the command that reloads the firewalld configurations and writes it to memory.\par
+\par
+\par
+View active Zones\par
+Now, we'll want to provide truncated listings of all currently active zones. This a good time to verify your zone settings.\par
+\par
+Run the command that displays all zone services.\par
+\par
+\par
+Block an IP address\par
+\par
+Use a rich-rule that blocks the IP address 138.138.0.3 on your public zone.\par
+\par
+\par
+Block Ping/ICMP Requests\par
+Harden your network against ping scans by blocking icmp ehco replies.\par
+\par
+Run the command that blocks pings and icmp requests in your public zone.\par
+\par
+\par
+Rule Check\par
+Now that you've set up your brand new firewalld installation, it's time to verify that all of the settings have taken effect.\par
+\par
+\par
+Run the command that lists all of the rule settings. Run one command at a time for each zone.\par
+\par
+\par
+Are all of the rules in place? If not, then go back and make the necessary modification before checking again.\par
+\par
+\par
+Congratulations! You have successfully configured and deployed a fully comprehensive firewalld installation.\par
+\par
+Part 3: IDS, IPS, DiD, and Firewalls\par
+Answer the following review questions.\par
+\par
+IDS vs. IPS Systems\par
+\par
+\par
+Name and define two ways an IDS connects to a network.\par
+\par
+\par
+Describe how an IPS connects to a network.\par
+\par
+\par
+What type of IDS compares patterns of traffic to predefined signatures and is unable to detect Zero-Day attacks?\par
+\par
+\par
+Which type of IDS is beneficial for detecting all suspicious traffic that deviates from the well-known baseline and is excellent at detecting when an attacker probes or sweeps a network?\par
+\par
+\par
+\par
+Defense in Depth\par
+\par
+\par
+For each of the following scenarios, provide the layer of Defense in Depth that applies:\par
+\par
+\par
+A criminal hacker tailgates an employee through an exterior door into a secured facility, explaining that they forgot their badge at home.\par
+\par
+\par
+A zero-day goes undetected by antivirus software.\par
+\par
+\par
+A criminal successfully gains access to HR\rquote s database.\par
+\par
+\par
+A criminal hacker exploits a vulnerability within an operating system.\par
+\par
+\par
+A hacktivist organization successfully performs a DDoS attack, taking down a government website.\par
+\par
+\par
+Data is classified at the wrong classification level.\par
+\par
+\par
+A state sponsored hacker group successfully firewalked an organization to produce a list of active services on an email server.\par
+\par
+\par
+\par
+\par
+Name one method of protecting data-at-rest from being readable on hard drive.\par
+\par
+\par
+Name one method to protect data-in-transit.\par
+\par
+\par
+What technology could provide law enforcement with the ability to track and recover a stolen laptop.\par
+\par
+\par
+How could you prevent an attacker from booting a stolen laptop using an external hard drive?\par
+\par
+\par
+\par
+Firewall Architectures and Methodologies\par
+\par
+\par
+Which type of firewall verifies the three-way TCP handshake? TCP handshake checks are designed to ensure that session packets are from legitimate sources.\par
+\par
+\par
+Which type of firewall considers the connection as a whole? Meaning, instead of looking at only individual packets, these firewalls look at whole streams of packets at one time.\par
+\par
+\par
+Which type of firewall intercepts all traffic prior to being forwarded to its final destination. In a sense, these firewalls act on behalf of the recipient by ensuring the traffic is safe prior to forwarding it?\par
+\par
+\par
+Which type of firewall examines data within a packet as it progresses through a network interface by examining source and destination IP address, port number, and packet type- all without opening the packet to inspect its contents?\par
+\par
+\par
+Which type of firewall filters based solely on source and destination MAC address?\par
+}
+ 

@@ -1,0 +1,36 @@
+Cybersecurity Threat Landscape (Part 2 - Akamai)
+In this part, you should primarily use the Akamai_Security_Year_in_Review_2019 and Akamai State of the Internet/ Security plus independent research to answer the below questions.
+______________________________________________________________________
+    1. DDOS attack events from January 2019 to September 2019 largely targeted which industry? 
+Attacks in 2019 were mainly against gaming services. 
+
+    2. Almost 50% of unique targets for DDoS attacks from January 2019- September 2019 largely targeted which industry? 
+DDoS attacks against unique targets were mainly against financial services in 2019.
+
+    3. Which companies are the top phishing targets, according to Akamai? 
+Dropbox, PayPal, Microsoft, DHL, DocuSign, and Linkedin are the main targets. 
+
+    4. What is credential stuffing? 
+It is a form of brute force attack where compromised credentials are automatically entered into websites until they are potentially matched to an account on file. 
+
+    5. Which country is the number one source of credential abuse attacks? Which country is number 2?
+The United States has the highest number of credential abuse, second to Russia. 
+
+    6. Which country is the number one source of web application attacks? Which country is number 2?
+America wins again with the highest number of web attacks with Russia following them again. 
+
+    7. In Akamai’s State of the Internet report, it refers to a possible DDoS team that the company thought was affecting a customer in Asia (starts on page 11). 
+    • Describe what was happening.
+    • What did the team believe the source of the attack was? 
+    • What did the team actually discover? 
+
+There were massive amounts of HTTP requests going to a customers URL:. The team believed it was a windows oriented tool since it was generated from a Windows COM object. They discovered a third party program had malfunctioned and was contacting a URL but it was not changing the header which would have mitigated it. 
+
+    8. What is an example of a performance issue with bot traffic? 
+Slow connection to websites due to the increased traffic. 
+
+    9. Known-good bots are bots that perform useful or helpful tasks, and not do anything malicious to sites or servers. What are the main categories of known-good bots. 
+Search engine crawlers, web archives, search engine optimization/audience analytics/marketing service, site monitoring services, content aggregators. 
+
+    10. What are two evasion techniques that malicious bots use? 
+Altering the user agent, and HTTP header values to impersonate widely used browsers/applications/or known good bots. 

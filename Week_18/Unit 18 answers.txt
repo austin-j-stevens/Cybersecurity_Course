@@ -1,0 +1,12 @@
+Part 1
+
+The report indicates that the attack took place on Feb 23rd at 2:30PM-6:30PM. 
+The attack lasted four hours. 
+
+Part 2
+
+No questions
+
+Part 3
+
+The brute force attack went from Friday, Feb 21 from 9:00 AM to 1:00 PM. 

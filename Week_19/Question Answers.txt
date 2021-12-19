@@ -1,0 +1,23 @@
+PART-1
+
+Q1
+
+There should not be that many user account login attempts from one location in quick succession. There should be an account lockout and a temporary block from that location after 4 incorrect login attempts and an alert should be triggered if the person failes more than 8 login attempts total. 
+This does not necessarily need to be on a specific account, but from any one location such as a MAC address or IP. 
+
+Q2
+
+Having a MAC filtering rule and a IP block as I had mentioned above would be the best option. If it is one block of IP's that are sending the bad requests then there should be no problem blocking the bad actors. 
+If it is a DDoS attack it would be more difficult. Configuring the network to allow only IPv6 traffic inbound and verify the users MAC address from either a verified BYOD machine or a company provided machine would possibly work. 
+
+PART-2
+
+Q1
+
+I would block all incoming and outgoing HTTP traffic for Ukraine. There is a lot of traffic coming from there that is unwanted and malicious. 
+
+Q2
+
+The first rule would be to reject all POST requests if there are more than 10 consecutive ones in less than a 2 sec time frame. From the logs it seems like there are numerous POST requests following a GET request. 
+
+The second rule is to restrict the VSI Account Logon to region. Where either trusted IP/MAC can access that specific php location on the server or to have it region locked on Kharkiv, Ukraine to reject all attempts to access that file. 

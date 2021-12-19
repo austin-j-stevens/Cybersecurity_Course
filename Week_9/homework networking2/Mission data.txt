@@ -1,0 +1,32 @@
+Mission 1 
+
+The Resistance is not receiving emails because the new mail servers can send traffic outbound to other mail servers, but when the traffic is incoming it goes to the incorrect mail server alt1/2 instead of the new one. 
+The correct server should be the asltx 1 and 2. 
+
+Mission 2
+
+The emails are going to spam because the spf record is pointing to an incorrect server IP address. 
+it must be changed from ip4:104.156.250.80 ip4:45.63.15.159 ip4:45.63.4.215 to the 45.23.176.21 address.
+
+Mission 3
+
+The page will not redirect since it is not tied to any domain or DNS. 
+
+Mission 4
+
+The name server for the backup was not added into the DNS record. It will need to be added in to properly redirect data. 
+
+Mission 5
+
+D, C, E, F, J, I, M, L, Q, U, V, Jedha = 33
+
+
+Mission 6
+
+SSID and password are linksys and dictionary
+
+The mac and ip of the arp traffic are 172.16.0.1 00:0f:66:e3:e4:01
+
+Mission 7 
+
+LOL thats a pretty cool animation. 

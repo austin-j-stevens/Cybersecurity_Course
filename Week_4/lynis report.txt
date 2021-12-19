@@ -1,0 +1,5 @@
+There are a few things that could be changed to make the computer more secure. There is a warning within the file permissions as many of the default permissions have not been changed, especially for the system files. Lynis found multiple vulnerable packages on the system, there is no password set for single mode. On top of that, the SSL is not properly configured. 
+
+All the file permissions need to be changed on the system to only allow read access to default users for most of the files, and take away read access for a majority of the system files that the basic user does not need access to. 
+There needs to be a script set up to allow for auto updates on the system to keep packages updated to minimize the vulnerabilities, including lynis itself. 
+
