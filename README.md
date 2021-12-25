@@ -14,13 +14,13 @@ Going over the different certifications as well. Mainly the Security+ exam. But 
 
 
 ----Main Sections----
- Class introductions
- Going over syllabus
- Career options
- CIA triad
- Different types of attacks
- Certification research
- Setting up vagrant machines
+~ Class introductions
+~ Going over syllabus
+~ Career options
+~ CIA triad
+~ Different types of attacks
+~ Certification research
+~ Setting up vagrant machines
 
 
 
@@ -33,12 +33,12 @@ Thoroughly went over the governance and compliance framework along with BCP/DR.
 Utalized OWASP to create risk analysis spreadsheets and a heat map for the risk assessment.
 
 ----Main Sections----
- Organazation roles and responsibilities 
- Security structure within a organization
- Security controls
- Threat and risk identification
- Governance and compliance
- Owasp and risk analysis
+~ Organazation roles and responsibilities 
+~ Security structure within a organization
+~ Security controls
+~ Threat and risk identification
+~ Governance and compliance
+~ Owasp and risk analysis
 
 
 
@@ -49,10 +49,10 @@ Started off pretty basic with just navigating the file system of the Ubuntu vagr
 Using the differnt commands in tandem was necessary to learn, along with how to utalize them to the fullest potential. 
 
 ----Main Sections----
- Introduction to terminal and the Linux system
- working with the different basic terminal commands (ls, cd, touch, mkdir, ect...).
- Understanding the structure of the terminal commands
- creating strings of commands for specific outputs
+~ Introduction to terminal and the Linux system
+~ working with the different basic terminal commands (ls, cd, touch, mkdir, ect...).
+~ Understanding the structure of the terminal commands
+~ creating strings of commands for specific outputs
 
 
 
@@ -65,12 +65,12 @@ Managing different access controls. Starting with auditing passwords for users, 
 Going over the file permissions and monitoring services as well. 
 
 ----Main Sections----
- Linux distro research
- Managing processes through terminal
- Using the package installer
- Access controls such as passwords and groups
- Verifying and modifying file permissions
- Monitoring system processes
+~ Linux distro research
+~ Managing processes through terminal
+~ Using the package installer
+~ Access controls such as passwords and groups
+~ Verifying and modifying file permissions
+~ Monitoring system processes
 
 
 
@@ -82,9 +82,9 @@ Creating and implementing cron jobs on the system for automated maintenance and 
 And managing the log files on the system. Creating backups and rotating the log files. 
 
 ----Main Sections----
- Using tar/untar
- Creating cron jobs
- Managing and monitoring log files.
+~ Using tar/untar
+~ Creating cron jobs
+~ Managing and monitoring log files.
 
 
 
@@ -97,10 +97,10 @@ Using bash to run scripts with differnt variables and user inputs.
 And a scavenger hunt through the system files of the vagrant machine looking for different flags. 
 
 ----Main Sections----
- Scripting with bash
- Using all of the commands learned to locat files on the system that were hidden 
- Compound commands
- Creating scripts with variables
+~ Scripting with bash
+~ Using all of the commands learned to locat files on the system that were hidden 
+~ Compound commands
+~ Creating scripts with variables
 
 
 
@@ -112,11 +112,11 @@ Using Powershell cmdlets and pipelines to navigate Windows and retrueve system e
 Then we started in on Active Directory, learning about domain controllers and using the tools within AD to create, monitor, and manager links to group policy objects and users and computers. 
 
 ----Main Sections----
- Powershell commands and scripts
- Active Directory tools
- Navigating Windows architecture
- Automating system functions and security features
- Managing users, groups, and computers
+~ Powershell commands and scripts
+~ Active Directory tools
+~ Navigating Windows architecture
+~ Automating system functions and security features
+~ Managing users, groups, and computers
 
 
 
@@ -129,11 +129,11 @@ Talked abou the OSI model, ensuring we understood each of the 7 layers.
 Analyzing traffic on the network with Wireshark and using SYN scans to explore unknown networks. 
 
 ----Main Sections----
- OSI and TCP/IP model
- Binary, IPv4, IPv6, and MAC addresses
- Types of requests (ACK, SYN, ect)
- Packetsniffing with wireshark
- Network scans
+~ OSI and TCP/IP model
+~ Binary, IPv4, IPv6, and MAC addresses
+~ Types of requests (ACK, SYN, ect)
+~ Packetsniffing with wireshark
+~ Network scans
 
 
 
@@ -147,13 +147,13 @@ Finished this section with a capture the flag competition.
 
 ----Main Sections----
 
- Understanding NAT and DHCP
- Routing protocols
- Packet capturing
- Cracking wifi encryption
- Investigating DNS records
- Inspecting email headers
- Capture the flag event
+~ Understanding NAT and DHCP
+~ Routing protocols
+~ Packet capturing
+~ Cracking wifi encryption
+~ Investigating DNS records
+~ Inspecting email headers
+~ Capture the flag event
 
 
 
@@ -165,11 +165,11 @@ Creating keys and using the keys to send and decrypt messages. Along with using 
 Authenticating sites with SSL certificates, and using different attacks against passwords and hash values. 
 
 ----Main Sections----
- Intro to cryptography
- Encoding and Encrypting
- Calculating strength of encryption
- Generating keys and hash values
- Attacking and cracking passwords and hash's
+~ Intro to cryptography
+~ Encoding and Encrypting
+~ Calculating strength of encryption
+~ Generating keys and hash values
+~ Attacking and cracking passwords and hash's
 
 
 
@@ -182,10 +182,10 @@ I analyzed threats and protected against them with many different tools such as 
 
 ----Main Sections----
 
- Firewall intruducion and configuration
- Snort rules and monitor
- Security Onion network monitoring
- IDS/IPS deep dive
+~ Firewall intruducion and configuration
+~ Snort rules and monitor
+~ Security Onion network monitoring
+~ IDS/IPS deep dive
 
 
 
@@ -201,10 +201,10 @@ To finish it up we verified the redundency by turning certain machines off and s
 ----Main Sections----
 
  SaaS, PaaS, IaaS, and others. 
- Creating firewall, VM, load balancer in Azure
- Writing yaml playbooks for ansible connections
- Creating docker containers
- Testing for redundency. 
+~ Creating firewall, VM, load balancer in Azure
+~ Writing yaml playbooks for ansible connections
+~ Creating docker containers
+~ Testing for redundency. 
 
 
 
@@ -217,10 +217,10 @@ I needed to deploy another server within the vnet to host the server itself and 
 
 ----Main Sections----
 
- Created server for ELK
- Yaml scripting
- Installing beats
- Testing functionality of ELK server
+~ Created server for ELK
+~ Yaml scripting
+~ Installing beats
+~ Testing functionality of ELK server
 
 
 
